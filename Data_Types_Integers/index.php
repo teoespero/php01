@@ -20,44 +20,31 @@ Western Governors University
 
 			// define constants
 			define("_NEWLINE", "<br>");
-			define("_SPACER", "&nbsp;");
+			define("_SPACER", " ");
 			define("_BOLDSTART", "<strong>");
 			define("_BOLDEND", "</strong>");
 			define("_ITALICSTART", "<em>");
 			define("_ITALICEND", "</em>");
 
-			$myName = "Teodulfo Espero";
-			$myMajor = "BS Cloud and Systems Administration";
-			$myUniversity = "Western Governors University ";
+			
+			echo _BOLDSTART . "BASIC MATH FUNCTIONS" . _BOLDEND . _NEWLINE . _NEWLINE;
 
-			$phrase = "Hello World!";
+			$num01 = 10;
+			$num02 = 30;
+			$num03 = 50;
 
+			$sum = $num01 + $num02 + $num03;
 
-			echo $phrase . _NEWLINE . _NEWLINE;
-			echo $myName . _NEWLINE;
-			echo $myMajor . _NEWLINE;
-			echo $myUniversity. _NEWLINE;
+			echo _BOLDSTART . "Addition:" . _BOLDEND . _ITALICSTART . _SPACER . (string)$num01 . _SPACER . "+" . _SPACER . (string)$num02 . _SPACER . "+" . _SPACER . (string)$num03 . _SPACER . "=" . _SPACER . (string)$sum . _ITALICEND . _NEWLINE;
 
-			// changing the case
-			$myOriginalMessage = "THIS IS MY FIRST MESSAGE";
+			$diff = $num03 - $num02 - $num01;
+			echo _BOLDSTART . "Subtraction:" . _BOLDEND . _ITALICSTART . _SPACER . (string)$num03 . _SPACER . "-" . _SPACER . (string)$num02 . _SPACER . "-" . _SPACER . (string)$num01 . _SPACER . "=" . _SPACER . (string)$diff . _ITALICEND . _NEWLINE;
 
-			echo _NEWLINE . _NEWLINE;
-			echo _BOLDSTART . "My original message:" . _BOLDEND . _SPACER . _ITALICSTART . $myOriginalMessage . _ITALICEND . _NEWLINE;
-			echo _BOLDSTART . "Lowercase:"  . _BOLDEND . _SPACER . _ITALICSTART . strtolower($myOriginalMessage) . _ITALICEND . _NEWLINE;
-			echo _BOLDSTART . "Uppercase first character:". _BOLDEND . _SPACER ._ITALICSTART .  ucfirst(strtolower($myOriginalMessage)) . _ITALICEND . _NEWLINE;
+			$quotient = $num03 / $num01;
+			echo _BOLDSTART . "Division:" . _BOLDEND . _ITALICSTART . _SPACER . (string)$num03 . _SPACER . "/" . _SPACER . (string)$num01 . _SPACER . "=" . _SPACER . (string)$quotient . _ITALICEND . _NEWLINE;
 
-			// more string functions
-			$nextMessage = "The quick brown fox jumped over the lazy dog.";		
-
-			echo _NEWLINE . _NEWLINE;
-			echo _BOLDSTART . "Original Message:" . _BOLDEND ._SPACER . _ITALICSTART . $nextMessage . _ITALICEND . _NEWLINE;
-			echo _BOLDSTART . "Original Length:" . _BOLDEND ._SPACER . _ITALICSTART . strlen($nextMessage) . _ITALICEND . _NEWLINE . _NEWLINE;
-
-			$nextMessage = str_replace("fox", "horse", $nextMessage);
-
-			echo _BOLDSTART . "New message:" . _BOLDEND . _SPACER . _ITALICSTART . $nextMessage . _ITALICEND . _NEWLINE;
-			echo _BOLDSTART . "New Length:" . _BOLDEND ._SPACER . _ITALICSTART . strlen($nextMessage) . _ITALICEND . _NEWLINE;
-
+			$product = $num02 * $num01;
+			echo _BOLDSTART . "Multiplication:" . _BOLDEND . _ITALICSTART . _SPACER . (string)$num02 . _SPACER . "*" . _SPACER . (string)$num01 . _SPACER . "=" . _SPACER . (string)$product . _ITALICEND . _NEWLINE;
 		?>
 	</body>
 </html>
